@@ -1,0 +1,17 @@
+@use "../../../scss/" as *;
+
+.loginForm__header,
+.resetForm__header {
+  margin: 0 auto;
+  text-align: center;
+
+  .loginForm__header img,
+  .resetForm__header img {
+    width: 8rem;
+  }
+
+  .loginForm__header p,
+  .resetForm__header p {
+    color: rgba(111, 111, 111, 1);
+  }
+}

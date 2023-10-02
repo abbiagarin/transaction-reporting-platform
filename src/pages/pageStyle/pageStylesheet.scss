@@ -1,0 +1,58 @@
+@use "../../scss/" as *;
+
+.loginSection,
+.resetSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: $width;
+  height: $height;
+
+  .loginSection__content,
+  .resetSection__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include flex(center, space-between, row);
+
+    .loginSection__content-image,
+    .resetSection__content-image {
+      @include flex(center, center, row);
+      flex: 0 1 40%;
+
+      @include tablet {
+        flex: 0 1 0%;
+      }
+    }
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      width: $width;
+      height: $height;
+
+      & img {
+        max-width: $width;
+        max-height: $height;
+        width: $width;
+        height: $height;
+        margin: auto;
+      }
+    }
+
+    .loginSection__content-form,
+    .resetSection__content-form {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 60%;
+
+      @include tablet {
+        flex: 0 1 100%;
+      }
+    }
+  }
+}
