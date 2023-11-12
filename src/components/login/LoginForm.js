@@ -2,52 +2,64 @@ import React from "react";
 import MuiTheme from "../../UI/MuiTheme";
 import itexLogo from "../../assets/itexLogo.png";
 import TextfieldWrapper from "../../UI/TextField";
+import { useNavigate } from "react-router-dom";
+import { LoadingButtonWrapper } from "../../UI/Button";
 import { Formik, Form } from "formik";
 import { loginFormSchema } from "../../schemas/validationSchema";
 import {
   Container,
   Box,
-  Button,
   InputAdornment,
   Typography,
+  IconButton,
 } from "@mui/material";
-import { Email, Visibility } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import {
+  Email,
+  Visibility,
+  ArrowRightAlt,
+  VisibilityOff,
+} from "@mui/icons-material";
 import "../../UI/FormStyleSheet.scss";
 
 const INITIAL_FORM_STATE = {
   email: "",
   password: "",
+  showPassword: false,
 };
 
 const LoginForm = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <MuiTheme>
       <div className="loginForm__header">
         <img src={itexLogo} alt="itexLogo" className="loginForm__itexLogo" />
-        <p>Please sign in to your account to continue</p>
+        <Typography variant="body2">
+          Please sign in to your account to continue
+        </Typography>
       </div>
 
       <div className="loginForm__control">
         <Formik
           initialValues={{ ...INITIAL_FORM_STATE }}
           validationSchema={loginFormSchema}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
         >
-          <Form>
-            <MuiTheme>
+          {({ isValid, isSubmitting, dirty, values, setFieldValue }) => (
+            <Form>
               <Container maxWidth="sm">
                 <Box sx={{ mx: 2, my: 3, p: 3 }}>
                   <TextfieldWrapper
                     id="email"
                     name="email"
+                    type="email"
                     label="Enter your email address"
                     InputProps={{
                       endAdornment: (
                         <InputAdornment position="end">
-                          <Email />
+                          <Email sx={{ cursor: "default" }} />
                         </InputAdornment>
                       ),
                     }}
@@ -58,12 +70,26 @@ const LoginForm = () => {
                   <TextfieldWrapper
                     id="password"
                     name="password"
-                    type="password"
+                    type={values.showPassword ? "text" : "password"}
                     label="Enter your password"
                     InputProps={{
                       endAdornment: (
                         <InputAdornment position="end">
-                          <Visibility />
+                          <IconButton
+                            disableRipple
+                            onClick={() =>
+                              setFieldValue(
+                                "showPassword",
+                                !values.showPassword
+                              )
+                            }
+                          >
+                            {values.showPassword ? (
+                              <Visibility />
+                            ) : (
+                              <VisibilityOff />
+                            )}
+                          </IconButton>
                         </InputAdornment>
                       ),
                     }}
@@ -75,8 +101,8 @@ const LoginForm = () => {
                     Forgot your password?
                     <Box
                       component="span"
-                      sx={{ ml: 1, color: "primary.main" }}
-                      onClick={() => navigate("/forgot-password")}
+                      sx={{ ml: 1, color: "primary.main", cursor: "pointer" }}
+                      onClick={() => navigate("/forgot_password")}
                     >
                       Reset
                     </Box>
@@ -84,16 +110,20 @@ const LoginForm = () => {
                 </Box>
 
                 <Box sx={{ mx: 2, my: 3, p: 3 }}>
-                  <Button variant="contained" fullWidth type="submit">
-                    Login In
-                  </Button>
+                  <LoadingButtonWrapper
+                    endIcon={<ArrowRightAlt sx={{ color: "#fff" }} />}
+                    loading={isSubmitting}
+                    disabled={isSubmitting || !isValid || !dirty || !values}
+                  >
+                    <span>Login In</span>
+                  </LoadingButtonWrapper>
                 </Box>
               </Container>
-            </MuiTheme>
-          </Form>
+            </Form>
+          )}
         </Formik>
       </div>
-    </>
+    </MuiTheme>
   );
 };
 

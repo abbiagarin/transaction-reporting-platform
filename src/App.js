@@ -1,32 +1,18 @@
-import React from "react";
-import LoginPage from "./login/components/LoginPage";
-import ResetPage from "./reset/components/ResetPage";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-  Navigate,
-} from "react-router-dom";
-
+import { RouterProvider } from "react-router-dom";
+import Router from "./routes/Routes";
 import "./App.scss";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route path="login" element={<LoginPage />} />
-      <Route path="forgot-password" element={<ResetPage />} />
-      <Route path="*" element={<Navigate to="/login" replace={true} />} />
-    </Route>
-  )
-);
-
 function App() {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <>{<RouterProvider router={Router} />}</>;
 }
+
+// // function App() {
+// //   // throw an error to test the error boundary
+// //   throw new Error("Error occurred");
+
+// //   //   return (
+// //   //         // JSX goes here
+// //   // )
+// }
 
 export default App;

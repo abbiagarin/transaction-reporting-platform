@@ -1,10 +1,10 @@
 import React from "react";
-import { createTheme, ThemeProvider, colors } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: colors.lightBlue[800],
+      main: "rgba(37, 136, 193, 1)",
     },
   },
   typography: {
@@ -21,7 +21,7 @@ const theme = createTheme({
         root: {
           backgroundColor: "rgba(225, 225, 225, .3)",
           label: {
-            fontWeight: "medium",
+            fontWeight: "light",
           },
         },
       },
@@ -30,18 +30,16 @@ const theme = createTheme({
     MuiSvgIcon: {
       styleOverrides: {
         root: {
-          color: "rgb(166,178,200)",
           fontSize: "2rem",
+          color: "rgb(166,178,200)",
         },
       },
     },
 
     MuiTypography: {
       styleOverrides: {
-        root: {},
-
         h4: {
-          fontWeight: "bold",
+          fontWeight: "medium",
         },
 
         body2: {
@@ -56,7 +54,29 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: "capitalize",
-          fontWeight: "bold",
+
+          "&.Mui-disabled": {
+            background: "rgba(37, 136, 193, .5);",
+            color: "rgb(255,255,255)",
+          },
+        },
+      },
+    },
+
+    MuiLoadingButton: {
+      styleOverrides: {
+        root: {
+          ".MuiButton-endIcon>*:nth-of-type(1)": {
+            fontSize: "2rem",
+          },
+        },
+      },
+    },
+
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          width: "100%",
         },
       },
     },

@@ -1,0 +1,24 @@
+@use "../../scss/" as *;
+
+.nav_link {
+  text-decoration: none;
+  color: $font-color;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.active {
+  color: $primary-color;
+  font-weight: bold;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid $primary-color;
+    position: absolute;
+    bottom: -1.1rem;
+    left: 0;
+    right: 0;
+    transition: all 0.3s;
+  }
+}

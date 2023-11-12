@@ -1,5 +1,5 @@
 import React from "react";
-import ResetForm from "./ResetForm";
+import ResetForm from "../../components/reset/ResetForm";
 import itexFrame1 from "../../assets/ItexFrame1.png";
 import "../../UI/pageStylesheet.scss";
 
