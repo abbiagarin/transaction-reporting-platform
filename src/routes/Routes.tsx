@@ -1,3 +1,4 @@
+import React from "react";
 import LoginPage from "../pages/login/LoginPage";
 import ResetPage from "../pages/reset/ResetPage";
 import BankPage from "../pages/bank/BankPage";

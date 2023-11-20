@@ -29,14 +29,18 @@ const pages = [
 const settings = ["Logout"];
 
 const Header = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<HTMLElement | null>(
+    null
+  );
+  const [anchorElUser, setAnchorElUser] = React.useState<HTMLElement | null>(
+    null
+  );
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleOpenNavMenu = (event: React.MouseEvent): void => {
+    setAnchorElNav(event.currentTarget as HTMLElement);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+  const handleOpenUserMenu = (event: React.MouseEvent): void => {
+    setAnchorElUser(event.currentTarget as HTMLElement);
   };
 
   const handleCloseNavMenu = () => {

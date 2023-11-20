@@ -1,5 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
+
+interface MuiThemeProps {
+  children: ReactNode;
+}
 
 const theme = createTheme({
   palette: {
@@ -8,7 +12,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Nunito Sans"],
+    fontFamily: "Nunito Sans",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
@@ -50,7 +54,7 @@ const theme = createTheme({
       },
     },
 
-    MuiButton: {
+    MuiLoadingButton: {
       styleOverrides: {
         root: {
           textTransform: "capitalize",
@@ -59,15 +63,10 @@ const theme = createTheme({
             background: "rgba(37, 136, 193, .5);",
             color: "rgb(255,255,255)",
           },
-        },
-      },
-    },
 
-    MuiLoadingButton: {
-      styleOverrides: {
-        root: {
-          ".MuiButton-endIcon>*:nth-of-type(1)": {
+          "& .MuiButton-endIcon svg ": {
             fontSize: "2rem",
+            color: "rgb(255,255,255)",
           },
         },
       },
@@ -81,9 +80,22 @@ const theme = createTheme({
       },
     },
   },
+
+  // MuiButton: {
+  //   styleOverrides: {
+  //     root: {
+  //       textTransform: "capitalize",
+
+  //       "&.Mui-disabled": {
+  //         background: "rgba(37, 136, 193, .5);",
+  //         color: "rgb(255,255,255)",
+  //       },
+  //     },
+  //   },
+  // },
 });
 
-const MuiTheme = ({ children }) => {
+const MuiTheme: React.FC<MuiThemeProps> = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 

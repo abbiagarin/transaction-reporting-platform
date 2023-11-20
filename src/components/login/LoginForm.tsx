@@ -111,7 +111,7 @@ const LoginForm = () => {
 
                 <Box sx={{ mx: 2, my: 3, p: 3 }}>
                   <LoadingButtonWrapper
-                    endIcon={<ArrowRightAlt sx={{ color: "#fff" }} />}
+                    endIcon={<ArrowRightAlt sx={{ color: "#665858" }} />}
                     loading={isSubmitting}
                     disabled={isSubmitting || !isValid || !dirty || !values}
                   >
