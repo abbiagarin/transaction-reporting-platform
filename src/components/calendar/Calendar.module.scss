@@ -1,0 +1,39 @@
+@use "scss" as *;
+
+.calendarWrap {
+  display: block;
+  position: relative;
+  //margin: auto 0;
+  width: 220px;
+
+  @include tablet {
+    width: 270px;
+  }
+}
+
+.inputBox {
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.arrow {
+  color: #bbbbbb;
+  vertical-align: middle;
+}
+
+.calender {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  border: 1px solid #ccc;
+  z-index: 99;
+
+  @include tablet {
+    transform: translateX(-10%);
+  }
+}

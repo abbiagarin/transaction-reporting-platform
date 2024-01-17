@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <span>
           <img
             draggable="false"
-            class="emoji"
+            className="emoji"
             alt="🚨"
             src="https://s.w.org/images/core/emoji/14.0.0/svg/1f6a8.svg"
           />

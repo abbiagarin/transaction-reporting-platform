@@ -1,11 +1,10 @@
 import React from "react";
-import MuiTheme from "../../UI/MuiTheme";
-import itexLogo from "../../assets/itexLogo.png";
-import TextfieldWrapper from "../../UI/TextField";
+import itexLogo from "assets/itexLogo.png";
+import TextfieldWrapper from "UI/TextField";
 import { useNavigate } from "react-router-dom";
-import { LoadingButtonWrapper } from "../../UI/Button";
+import { LoadingButtonWrapper } from "UI/Button";
 import { Formik, Form } from "formik";
-import { loginFormSchema } from "../../schemas/validationSchema";
+import { loginFormSchema } from "schemas/validationSchema";
 import {
   Container,
   Box,
@@ -19,7 +18,7 @@ import {
   ArrowRightAlt,
   VisibilityOff,
 } from "@mui/icons-material";
-import "../../UI/FormStyleSheet.scss";
+import "UI/FormStyleSheet.scss";
 
 const INITIAL_FORM_STATE = {
   email: "",
@@ -31,7 +30,7 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   return (
-    <MuiTheme>
+    <>
       <div className="loginForm__header">
         <img src={itexLogo} alt="itexLogo" className="loginForm__itexLogo" />
         <Typography variant="body2">
@@ -123,7 +122,7 @@ const LoginForm = () => {
           )}
         </Formik>
       </div>
-    </MuiTheme>
+    </>
   );
 };
 

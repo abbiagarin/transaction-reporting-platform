@@ -1,0 +1,20 @@
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+
+.rdrDayPassive {
+  opacity: 0.3 !important;
+}
+
+.rdrNextPrevButton {
+  border-radius: 50% !important;
+}
+
+.rdrCalendarWrapper {
+  border-radius: 6px;
+}
+
+.rdrDayDisabled {
+  opacity: 0.3 !important;
+  background-color: transparent !important;
+}

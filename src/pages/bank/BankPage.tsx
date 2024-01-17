@@ -1,7 +1,12 @@
 import React from "react";
+import Dashboard from "modules/dashboard/BankDashboard";
 
 const BankPage = () => {
-  return <div>BankPage</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 
 export default BankPage;

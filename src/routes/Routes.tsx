@@ -1,12 +1,12 @@
 import React from "react";
-import LoginPage from "../pages/login/LoginPage";
-import ResetPage from "../pages/reset/ResetPage";
-import BankPage from "../pages/bank/BankPage";
-import TerminalPage from "../pages/terminals/TerminalPage";
-import MerchantPage from "../pages/merchants/MerchantPage";
-import PwtTransactionsPage from "../pages/pwtTransactions/PwtTransactionsPage";
-import PosTransactionsPage from "../pages/posTransactions/PosTransactionsPage";
-import NotFound from "../pages/notFound/NotFound";
+import LoginPage from "pages/login/LoginPage";
+import ResetPage from "pages/reset/ResetPage";
+import BankPage from "pages/bank/BankPage";
+import TerminalPage from "pages/terminals/TerminalPage";
+import MerchantPage from "pages/merchants/MerchantPage";
+import PwtTransactionsPage from "pages/pwtTransactions/PwtTransactionsPage";
+import PosTransactionsPage from "pages/posTransactions/PosTransactionsPage";
+import NotFound from "pages/notFound/NotFound";
 import {
   createBrowserRouter,
   createRoutesFromElements,

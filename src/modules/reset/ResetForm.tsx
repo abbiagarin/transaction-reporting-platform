@@ -1,14 +1,14 @@
 import React from "react";
-import MuiTheme from "../../UI/MuiTheme";
-import itexLogo from "../../assets/itexLogo.png";
-import TextfieldWrapper from "../../UI/TextField";
+import MuiTheme from "UI/MuiTheme";
+import itexLogo from "assets/itexLogo.png";
+import TextfieldWrapper from "UI/TextField";
 import { useNavigate } from "react-router-dom";
-import { LoadingButtonWrapper } from "../../UI/Button";
+import { LoadingButtonWrapper } from "UI/Button";
 import { Formik, Form } from "formik";
 import { Container, Box, InputAdornment, Typography } from "@mui/material";
 import { Email, ArrowRightAlt } from "@mui/icons-material";
-import { resetFormSchema } from "../../schemas/validationSchema";
-import "../../UI/FormStyleSheet.scss";
+import { resetFormSchema } from "schemas/validationSchema";
+import "UI/FormStyleSheet.scss";
 
 const initialValues = {
   email: "",

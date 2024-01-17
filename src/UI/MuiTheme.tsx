@@ -46,11 +46,22 @@ const theme = createTheme({
           fontWeight: "medium",
         },
 
+        h6: {
+          fontWeight: "medium",
+          textAlign: "center",
+        },
+
         body2: {
           fontWeight: "medium",
           marginLeft: "2rem",
           textAlign: "center",
         },
+      },
+    },
+
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
       },
     },
 
@@ -72,27 +83,45 @@ const theme = createTheme({
       },
     },
 
-    MuiPaper: {
+    // MuiPaper: {
+    //   styleOverrides: {
+    //     root: {
+    //       padding: "2rem",
+    //     },
+    //   },
+    // },
+
+    MuiButton: {
       styleOverrides: {
         root: {
-          width: "100%",
+          textTransform: "capitalize",
+          cursor: "pointer",
+          // backgroundColor: "rgb(25, 25, 112)",
+          // color: "rgb(255,255,255)",
+
+          // "&:active": {
+          //   backgroundColor: "rgb(25, 25, 112)",
+          //   color: "rgb(255,255,255)",
+          // },
+        },
+      },
+    },
+
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: "rgb(0,0,0)",
+          textTransform: "capitalize",
+
+          "&.Mui-selected": {
+            color: "rgb(255,255,255)",
+            backgroundColor: "rgb(25, 25, 112)",
+            borderRadius: "0.3rem",
+          },
         },
       },
     },
   },
-
-  // MuiButton: {
-  //   styleOverrides: {
-  //     root: {
-  //       textTransform: "capitalize",
-
-  //       "&.Mui-disabled": {
-  //         background: "rgba(37, 136, 193, .5);",
-  //         color: "rgb(255,255,255)",
-  //       },
-  //     },
-  //   },
-  // },
 });
 
 const MuiTheme: React.FC<MuiThemeProps> = ({ children }) => {

@@ -1,4 +1,4 @@
-@use "../../scss/" as *;
+@use "scss" as *;
 
 .notFound__section {
   position: absolute;
@@ -10,48 +10,34 @@
   height: $height;
 
   &Content {
-    @include flex(center, center, row);
+    @include flex(center, center, column);
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-
-    @include tablet {
-      @include flex(center, center, column);
-    }
   }
 
   &Details {
     @include flex(center, center, column);
-    flex: 0 1 40%;
-
-    @include mobile {
-      flex: 0 1 50%;
-      @include flex(center, flex-end, column);
-    }
+    flex-wrap: wrap;
 
     & img {
-      width: 8rem;
+      width: 18rem;
     }
 
-    & h4 {
-      font-size: 1.5rem;
-      padding: 0.3rem 0;
-      letter-spacing: 0.1rem;
-    }
-    & p {
-      padding-bottom: 0.3rem;
-      letter-spacing: 0.1rem;
-      font-weight: 500;
+    & h3 {
+      font-size: 1.2rem;
+      margin-top: -2rem;
+      margin-bottom: 0.5rem;
     }
 
     & button {
-      border: 1px solid $primary-color;
-      border-radius: 3rem;
-      padding: 0.5rem 2.2rem;
-      margin: 0.3rem 0;
-      background-color: $primary-color;
+      border: 1px solid $main-color;
+      border-radius: 0.5rem;
+      padding: 0.3rem 4.5rem;
+      margin: 1.5rem 0;
+      background-color: $main-color;
       color: $white;
       font-family: inherit;
       font-size: 1rem;
@@ -59,31 +45,10 @@
       cursor: pointer;
 
       &:hover {
-        color: $primary-color;
+        color: $main-color;
         background-color: $white;
-        box-shadow: 0px 0px 5px 2px $primary-color;
+        box-shadow: 0px 0px 5px 2px $main-color;
       }
-    }
-  }
-}
-
-.error_img {
-  @include flex(flex-start, flex-start, column);
-  flex: 0 1 30%;
-
-  @include mobile {
-    flex: 0 1 50%;
-  }
-
-  & img {
-    width: 15rem;
-
-    @include tablet {
-      width: 18rem;
-    }
-
-    @include mobile {
-      width: 20rem;
     }
   }
 }

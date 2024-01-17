@@ -1,0 +1,20 @@
+@use "scss" as *;
+
+.footer__section {
+  @include flex(center, center, row);
+  background-color: $primary-color;
+  width: $width;
+  color: $white;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+
+  & p {
+    font-size: 0.8rem;
+
+    & span {
+      margin-right: 0.3rem;
+    }
+  }
+}
