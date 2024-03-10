@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
-import MuiTheme from "UI/MuiTheme";
+import MuiTheme from "components/muiTheme/MuiTheme";
 import CircularIndeterminate from "components/appLoader/AppLoader";
 import ErrorPage from "components/errorPage/ErrorPage";
 import ErrorBoundary from "components/errorBoundary/ErrorBoundary";

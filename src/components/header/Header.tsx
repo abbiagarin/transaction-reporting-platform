@@ -24,6 +24,7 @@ const pages = [
   "pos transactions",
   "pwt transactions",
   "middleWare dashboard",
+  "notifications",
 ];
 const settings = ["Logout"];
 
@@ -112,8 +113,10 @@ const Header = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
+              PaperProps={{
+                style: {
+                  width: "100%",
+                },
               }}
             >
               {pages.map((page) => (

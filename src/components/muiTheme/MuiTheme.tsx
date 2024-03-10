@@ -12,17 +12,17 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Nunito Sans",
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
-    fontWeightBold: 700,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    fontWeightBold: 600,
   },
 
   components: {
     MuiTextField: {
       styleOverrides: {
         root: {
+          fontFamily: "Nunito Sans",
           backgroundColor: "rgba(225, 225, 225, .3)",
           label: {
             fontWeight: "light",
@@ -46,15 +46,24 @@ const theme = createTheme({
           fontWeight: "medium",
         },
 
-        h6: {
+        h5: {
           fontWeight: "medium",
-          textAlign: "center",
         },
 
         body2: {
           fontWeight: "medium",
           marginLeft: "2rem",
           textAlign: "center",
+        },
+
+        body1: {
+          fontFamily: "Inter",
+          fontWeight: "medium",
+        },
+
+        caption: {
+          fontFamily: "Inter",
+          fontWeight: "light",
         },
       },
     },
@@ -68,6 +77,7 @@ const theme = createTheme({
     MuiLoadingButton: {
       styleOverrides: {
         root: {
+          fontFamily: "Nunito Sans",
           textTransform: "capitalize",
 
           "&.Mui-disabled": {
@@ -110,6 +120,8 @@ const theme = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
+          fontFamily: "Inter",
+          fontWeight: 400,
           color: "rgb(0,0,0)",
           textTransform: "capitalize",
 
@@ -118,6 +130,29 @@ const theme = createTheme({
             backgroundColor: "rgb(25, 25, 112)",
             borderRadius: "0.3rem",
           },
+        },
+      },
+    },
+
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          padding: "2px",
+          backgroundColor: "#F5F5F5",
+          border: "1px solid #9D9D9D",
+        },
+      },
+    },
+
+    MuiTableCell: {
+      defaultProps: {
+        sx: {
+          fontFamily: "Inter",
+          color: "rgb(102,102,102)",
+          fontSize: "9px",
+          borderBottom: "none",
+          p: 1.5,
+          textAlign: "center",
         },
       },
     },

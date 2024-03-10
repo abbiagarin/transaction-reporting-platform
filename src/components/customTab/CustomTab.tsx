@@ -27,7 +27,12 @@ const CustomTab: React.FC<CustomTabProps> = ({ tabs, tabsStyles }) => {
           sx={{ ...tabsStyles }}
         >
           {tabs.map(({ label }, i) => (
-            <Tab label={label} key={i} value={i.toString()} />
+            <Tab
+              label={label}
+              key={i}
+              value={i.toString()}
+              sx={{ px: { xs: 3.5, md: 5 } }}
+            />
           ))}
         </Tabs>
       </Box>

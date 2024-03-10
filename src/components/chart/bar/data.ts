@@ -253,66 +253,6 @@ export const bankData: bankDataProps[] = [
       failed: 5000000,
     },
   },
-  {
-    name: "Wema",
-    logo: "",
-    transactionCount: {
-      successful: 11000,
-      failed: 1100,
-    },
-    transactionValue: {
-      successful: 60000000,
-      failed: 5000000,
-    },
-  },
-  {
-    name: "Wema",
-    logo: "",
-    transactionCount: {
-      successful: 11000,
-      failed: 1100,
-    },
-    transactionValue: {
-      successful: 60000000,
-      failed: 5000000,
-    },
-  },
-  {
-    name: "Wema",
-    logo: "",
-    transactionCount: {
-      successful: 11000,
-      failed: 1100,
-    },
-    transactionValue: {
-      successful: 60000000,
-      failed: 5000000,
-    },
-  },
-  {
-    name: "Wema",
-    logo: "",
-    transactionCount: {
-      successful: 11000,
-      failed: 1100,
-    },
-    transactionValue: {
-      successful: 60000000,
-      failed: 5000000,
-    },
-  },
-  {
-    name: "Wema",
-    logo: "",
-    transactionCount: {
-      successful: 11000,
-      failed: 1100,
-    },
-    transactionValue: {
-      successful: 60000000,
-      failed: 5000000,
-    },
-  },
 ];
 
 export const barChartOptions: ApexOptions = {
@@ -344,7 +284,7 @@ export const barChartOptions: ApexOptions = {
   legend: {
     show: true,
     showForSingleSeries: true,
-    fontFamily: "Nunito Sans",
+    fontFamily: "Inter",
   },
 
   yaxis: {
@@ -353,7 +293,7 @@ export const barChartOptions: ApexOptions = {
 
       style: {
         color: "#666666",
-        fontFamily: "Nunito Sans",
+        fontFamily: "Inter",
         fontWeight: 400,
       },
     },
@@ -389,7 +329,7 @@ export const barChartOptions: ApexOptions = {
       show: true,
       rotate: 0,
       style: {
-        fontFamily: "Nunito Sans",
+        fontFamily: "Inter",
       },
     },
   },

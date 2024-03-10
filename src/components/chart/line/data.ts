@@ -133,7 +133,7 @@ export const lineChartOptions: ApexOptions = {
   legend: {
     show: true,
     showForSingleSeries: true,
-    fontFamily: "Nunito Sans",
+    fontFamily: "Inter",
   },
 
   yaxis: {
@@ -142,7 +142,7 @@ export const lineChartOptions: ApexOptions = {
 
       style: {
         color: "#666666",
-        fontFamily: "Nunito Sans",
+        fontFamily: "Inter",
         fontWeight: 400,
       },
     },
@@ -178,7 +178,7 @@ export const lineChartOptions: ApexOptions = {
       show: true,
       rotate: 0,
       style: {
-        fontFamily: "Nunito Sans",
+        fontFamily: "Inter",
       },
     },
   },

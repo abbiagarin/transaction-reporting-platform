@@ -1,8 +1,8 @@
 import React from "react";
 import itexLogo from "assets/itexLogo.png";
-import TextfieldWrapper from "UI/TextField";
+import TextfieldWrapper from "components/muiTextField/TextField";
 import { useNavigate } from "react-router-dom";
-import { LoadingButtonWrapper } from "UI/Button";
+import { LoadingButtonWrapper } from "components/button/Button";
 import { Formik, Form } from "formik";
 import { loginFormSchema } from "schemas/validationSchema";
 import {

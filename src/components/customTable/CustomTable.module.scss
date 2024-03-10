@@ -1,0 +1,82 @@
+@use "scss" as *;
+
+.table-container {
+  margin: 0 20px;
+}
+
+.input-container {
+  @include flex(center, flex-start, row);
+  width: 100%;
+  margin-bottom: 16px;
+
+  & input {
+    border: 0.5px solid #a1a9b8;
+    border-radius: 6px;
+    padding: 11px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 8px;
+
+    &::-webkit-input-placeholder {
+      font-family: $dashboard-font;
+      color: #666666;
+      font-size: 9px;
+    }
+
+    &::-moz-placeholder {
+      font-family: $dashboard-font;
+      color: #666666;
+      font-size: 9px;
+    }
+
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder {
+      font-family: $dashboard-font;
+      color: #666666;
+      font-size: 9px;
+    }
+  }
+}
+
+.image-wrapper {
+  @include flex(center, flex-start, row);
+  flex-wrap: wrap;
+
+  > * {
+    margin-right: 10px;
+    margin-bottom: 16px;
+  }
+
+  img {
+    width: 15px;
+    height: 7px;
+  }
+
+  .typography {
+    font-family: $dashboard-font;
+    font-size: 9px;
+  }
+}
+
+.table-header {
+  background-color: #f5f7f9;
+
+  span {
+    @include flex(center, center, row);
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.table-body {
+  .table-row {
+    background-color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .table-row:nth-child(2n) {
+    background: #f5f7f9;
+  }
+}

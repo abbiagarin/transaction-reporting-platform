@@ -5,7 +5,7 @@ export const CardData = [
   {
     header: "18 Total Banks",
     body: "18",
-    footer: <div style={{ textAlign: "center" }}>18 total banks</div>,
+    footer: <div>18 total banks</div>,
   },
   {
     header: "Total transactions",
@@ -17,9 +17,7 @@ export const CardData = [
         </span>
       </>
     ),
-    footer: (
-      <div style={{ textAlign: "center" }}>256,669 total transactions</div>
-    ),
+    footer: <div>256,669 total transactions</div>,
   },
   {
     header: "Successful transactions",
@@ -31,9 +29,7 @@ export const CardData = [
         </span>
       </>
     ),
-    footer: (
-      <div style={{ textAlign: "center" }}>211,792 successful transactions</div>
-    ),
+    footer: <div>211,792 successful transactions</div>,
   },
   {
     header: "Failed Transactions",
@@ -45,8 +41,6 @@ export const CardData = [
         </span>
       </>
     ),
-    footer: (
-      <div style={{ textAlign: "center" }}>44,940 failed transactions</div>
-    ),
+    footer: <div>44,940 failed transactions</div>,
   },
 ];

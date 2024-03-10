@@ -1,0 +1,112 @@
+@use "scss" as *;
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.containerWrapper {
+  margin: 0 auto;
+  max-width: calc(100% - 150px);
+  padding-left: 30px;
+  padding-right: 20px;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.customCard {
+  width: 100%;
+  text-align: center;
+
+  @include mobile {
+    width: "70%";
+    margin: "0 auto";
+  }
+}
+
+.cardLogo {
+  width: 25px;
+  margin-left: 5px;
+}
+
+.chartWrapper {
+  width: 95%;
+  margin: "auto";
+}
+
+.chartButton {
+  @include flex(flex-end, flex-end, row);
+}
+
+.button {
+  font-weight: 400;
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.buttonText {
+  color: $primary-color;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.cardAcquirerWrapper {
+  @include flex(center, space-between, row);
+
+  &Header {
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1;
+  }
+
+  // .cardSchemeContainer {
+  //   margin: 35px;
+  //   box-shadow: $box-shadow;
+  // }
+}
+
+.topError {
+  @include flex(center, space-between, row);
+  border: 1px solid #9d9d9d;
+  background-color: #f5f5f5;
+  color: #737373;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 2px;
+  font-family: $dashboard-font;
+  font-size: 10px;
+}
+
+//scrollbar
+.scrollbar {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: lightgray;
+}

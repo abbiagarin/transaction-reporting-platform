@@ -20,8 +20,8 @@ const Router = createBrowserRouter(
     <Route>
       <Route>
         <Route path="/" element={<RootLayout />}>
-          {/* <Route index element={<Navigate to="/banks" replace={true} />} /> */}
-
+          <Route index element={<Navigate to="/banks" replace={true} />} />{" "}
+          {/* Set the default page to /banks */}
           <Route path="banks" element={<BankPage />} />
           <Route path="terminals" element={<TerminalPage />} />
           <Route path="merchants" element={<MerchantPage />} />
