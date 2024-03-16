@@ -18,7 +18,7 @@ import {
   ArrowRightAlt,
   VisibilityOff,
 } from "@mui/icons-material";
-import "UI/FormStyleSheet.scss";
+import "formStyleSheet/FormStyleSheet.scss";
 
 const INITIAL_FORM_STATE = {
   email: "",

@@ -1,7 +1,7 @@
 import React from "react";
 import itexFrame1 from "../../assets/ItexFrame1.png";
 import LoginForm from "../../modules/login/components/LoginForm";
-import "../../UI/pageStylesheet.scss";
+import "formStyleSheet/FormStyleSheet.scss";
 
 const LoginPage = () => {
   return (
