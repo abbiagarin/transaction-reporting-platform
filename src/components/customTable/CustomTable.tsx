@@ -13,12 +13,11 @@ import {
 import masterCard from "../../assets/masterCard.png";
 import visaCard from "../../assets/visaCard.png";
 import verveCard from "../../assets/verveCard.png";
-import style from "./CustomTable.module.scss";
-import styles from "../../modules/dashboard/components/BankDashboard.module.scss";
-
 import redRectangle from "assets/redRectangle.png";
 import yellowRectangle from "assets/yellowRectangle.png";
 import grayRectangle from "assets/grayRectangle.png";
+import style from "./CustomTable.module.scss";
+import styles from "../bankDashboard/BankDashboard.module.scss";
 
 interface bankCardPerformanceProps {
   BankName: string;

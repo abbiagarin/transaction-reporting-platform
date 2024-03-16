@@ -8,7 +8,7 @@ import { Formik, Form } from "formik";
 import { Container, Box, InputAdornment, Typography } from "@mui/material";
 import { Email, ArrowRightAlt } from "@mui/icons-material";
 import { resetFormSchema } from "schemas/validationSchema";
-import "formStyleSheet/FormStyleSheet.scss";
+import "../formStyleSheet/FormStyleSheet.scss";
 
 const initialValues = {
   email: "",

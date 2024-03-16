@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "modules/dashboard/components/BankDashboard";
+import Dashboard from "components/bankDashboard/BankDashboard";
 
 const BankPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import ResetForm from "../../modules/reset/ResetForm";
 import itexFrame1 from "../../assets/ItexFrame1.png";
-import "formStyleSheet/FormStyleSheet.scss";
+import ResetForm from "components/reset/ResetForm";
+import "components/formStyleSheet/FormStyleSheet.scss";
 
 const ResetPage = () => {
   return (

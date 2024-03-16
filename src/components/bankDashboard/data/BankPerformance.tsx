@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../components/BankDashboard.module.scss";
+import styles from "../BankDashboard.module.scss";
 
 const TopBanks = [
   {
