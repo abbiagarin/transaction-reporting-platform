@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import error_img from "assets/error_img.png";
+import error_img from "assets/img/error_img.png";
 import styles from "./NotFound.module.scss";
 
 const NotFound = () => {

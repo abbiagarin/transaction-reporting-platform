@@ -10,12 +10,14 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import masterCard from "../../assets/masterCard.png";
-import visaCard from "../../assets/visaCard.png";
-import verveCard from "../../assets/verveCard.png";
-import redRectangle from "assets/redRectangle.png";
-import yellowRectangle from "assets/yellowRectangle.png";
-import grayRectangle from "assets/grayRectangle.png";
+import {
+  masterCard,
+  visaCard,
+  verveCard,
+  redRectangle,
+  yellowRectangle,
+  grayRectangle,
+} from "assets/index";
 import style from "./CustomTable.module.scss";
 import styles from "../bankDashboard/BankDashboard.module.scss";
 

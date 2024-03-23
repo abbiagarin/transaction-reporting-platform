@@ -19,7 +19,7 @@ const formatTotalSum = (totalSum: number): string => {
   return `₦${totalSum} ${suffix}`;
 };
 
-const LineChart: React.FC = () => {
+export const LineChart: React.FC = () => {
   const [options, setOptions] = useState(lineChartOptions);
 
   useEffect(() => {
@@ -51,5 +51,3 @@ const LineChart: React.FC = () => {
     />
   );
 };
-
-export default LineChart;

@@ -19,7 +19,7 @@ const formatTotalSum = (totalSum: number): string => {
   return `₦${totalSum} ${suffix}`;
 };
 
-const BarChart: React.FC = () => {
+export const BarChart: React.FC = () => {
   const [options, setOptions] = useState(barChartOptions);
 
   useEffect(() => {
@@ -50,5 +50,3 @@ const BarChart: React.FC = () => {
     />
   );
 };
-
-export default BarChart;

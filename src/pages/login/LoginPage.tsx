@@ -1,5 +1,5 @@
 import React from "react";
-import itexFrame1 from "../../assets/ItexFrame1.png";
+import itexFrame1 from "../../assets/img/ItexFrame1.png";
 import LoginForm from "components/login/LoginForm";
 import "components/formStyleSheet/FormStyleSheet.scss";
 

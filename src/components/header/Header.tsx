@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import itexLogo from "assets/itexLogo.png";
+import itexLogo from "assets/img/itexLogo.png";
 import styles from "./Header.module.scss";
 
 const pages = [

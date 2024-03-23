@@ -1,7 +1,8 @@
 import { cardAcquirerProps } from "./type";
-import masterCard from "../../../assets/masterCard.png";
-import visaCard from "../../../assets/visaCard.png";
-import verveCard from "../../../assets/verveCard.png";
+import masterCard from "../../../assets/img/masterCard.png";
+import visaCard from "../../../assets/img/visaCard.png";
+import verveCard from "../../../assets/img/verveCard.png";
+// import { masterCard, visaCard, verveCard } from "..";
 
 export const cardAquirerScheme: cardAcquirerProps[] = [
   {

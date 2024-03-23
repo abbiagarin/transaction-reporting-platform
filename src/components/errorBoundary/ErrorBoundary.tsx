@@ -1,5 +1,5 @@
 import React from "react";
-import error404 from "assets/error404.png";
+import error404 from "assets/img/error404.png";
 import styles from "./Error.module.scss";
 import { ErrorInfo } from "react";
 import RefreshIcon from "@mui/icons-material/Refresh";

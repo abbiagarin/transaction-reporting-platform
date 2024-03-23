@@ -8,27 +8,33 @@ import {
   Card,
   Typography,
 } from "@mui/material";
+import NorthIcon from "@mui/icons-material/North";
+import SouthIcon from "@mui/icons-material/South";
+
+import {
+  CardData,
+  TabData,
+  BarChart,
+  LineChart,
+  RadialChart,
+  masterCard,
+  visaCard,
+  verveCard,
+} from "./index";
+
+import { cardAquirerScheme } from "components/chart/radial/data";
+import { SelectBankButton } from "components/button/Button";
 import Calendar from "components/calendar/Calendar";
 import CustomTab from "components/customTab/CustomTab";
 import CustomCard from "components/customCard/CustomCard";
-import BarChart from "components/chart/bar/BarChart";
-import LineChart from "components/chart/line/LineChart";
-import { CardData, TabData } from "./index";
-import RadialChart from "components/chart/radical/RadialChart";
-import { cardAquirerScheme } from "components/chart/radical/data";
-import masterCard from "assets/masterCard.png";
-import visaCard from "assets/visaCard.png";
-import verveCard from "assets/verveCard.png";
-import { SelectBankButton } from "components/button/Button";
+import CustomTable from "components/customTable/CustomTable";
 import TopError from "./data/TopError";
 import {
   LeastBankPerformance,
   TopBankPerformance,
 } from "./data/BankPerformance";
-import NorthIcon from "@mui/icons-material/North";
-import SouthIcon from "@mui/icons-material/South";
+
 import styles from "./BankDashboard.module.scss";
-import CustomTable from "components/customTable/CustomTable";
 
 const BankDashboard = () => {
   const [selectedChart, setSelectedChart] = useState("bar");

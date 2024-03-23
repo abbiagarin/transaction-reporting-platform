@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { DateRangePicker } from "react-date-range";
 import { addDays } from "date-fns";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import format from "date-fns/format";
-import styles from "./Calendar.module.scss";
-import "./index.css";
-
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import styles from "./Calendar.module.scss";
+import "./index.css";
 
 const Calendar = () => {
   // open/close state

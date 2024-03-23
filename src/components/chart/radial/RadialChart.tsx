@@ -9,7 +9,7 @@ interface RadialChartProps {
   data: cardAcquirerProps[];
 }
 
-const RadialChart: React.FC<RadialChartProps> = ({ data }) => {
+export const RadialChart: React.FC<RadialChartProps> = ({ data }) => {
   const chartData = data.map((card) => ({
     name: card.name,
     logo: card.logo,
@@ -92,5 +92,3 @@ const RadialChart: React.FC<RadialChartProps> = ({ data }) => {
     />
   );
 };
-
-export default RadialChart;
